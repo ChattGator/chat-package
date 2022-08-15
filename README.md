@@ -1,10 +1,13 @@
 # Chat UI kit
 
 ## To test your component
-1. Run `npm run dev`
-2. Goto `example/src/App.js` and import component and add respective props.
-`import ChatUIKit from 'chat-ui-kit'`
-3. Test your components
+1. Compile your component
+`npm run rollup`
+2. If no error, then follow:
+	1. Run `npm run dev`
+	2. Goto `example/src/App.js` and import component and add respective props.
+	`import ChatUIKit from 'chat-ui-kit'`
+	3. Test your components
 
 # Follow if above not working only
 ## To test your component

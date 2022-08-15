@@ -2,13 +2,6 @@
   "compilerOptions": {
     // Default
     "target": "es5", 
-     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-      "ES6"
-    ],
-    "allowJs": true,
     "esModuleInterop": true, 
     "forceConsistentCasingInFileNames": true,
     "strict": true, 
@@ -24,9 +17,6 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
-    "resolveJsonModule": true,
-    "isolatedModules": false,
-    "incremental": true,
     "baseUrl": "./src",
     "paths": {
       "@components": [
