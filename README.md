@@ -1,5 +1,8 @@
 # Chat UI kit
 
+## To declare styling props:
+1. use `classes` as propname
+2. see example and component example - `button.tsx` to learn more
 ## To test your component
 1. Compile your component
 `npm run rollup`

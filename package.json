@@ -2,6 +2,9 @@
   "name": "chat-ui-kit",
   "version": "1.0.0",
   "description": "A customizable chat ui kit built for developers, by the developers",
+   "rollup": {
+    "browser": true
+  },
   "scripts": {
     "prebuild": "rm -rf dist && rm -rf .rollup.cache",
     "rollup-start": "rollup -c",
@@ -19,6 +22,11 @@
   "author": "Chatgator",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
@@ -26,6 +34,7 @@
     "@types/react": "^18.0.17",
     "@types/styled-components": "^5.1.26",
     "autoprefixer": "^10.4.8",
+    "babel-jest": "^28.1.3",
     "postcss": "^8.4.16",
     "rollup": "^2.78.0",
     "rollup-plugin-dts": "^4.2.2",

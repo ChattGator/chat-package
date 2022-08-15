@@ -13,11 +13,12 @@
     "declaration": true,
     "declarationDir": "types",
     "sourceMap": true,
+    "rootDir": "src",
     "outDir": "dist",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
-    "baseUrl": "./src",
+    "baseUrl": "./src/",
     "paths": {
       "@components": [
         "components"

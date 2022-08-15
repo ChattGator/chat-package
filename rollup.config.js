@@ -1,3 +1,4 @@
+import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
@@ -26,18 +27,10 @@ export default [
     plugins: [
       peerDepsExternal(),
       resolve(),
+      babel({ babelHelpers: "bundled" }),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
-      postcss({
-        config: {
-          path: "./postcss.config.js",
-        },
-        extensions: [".css"],
-        minimize: true,
-        inject: {
-          insertAt: "top",
-        },
-      }),
+      typescript({ tsconfig: "./tsconfig.json", declarationDir: "dist" }),
+      postcss(),
       terser(),
     ],
   },
@@ -45,6 +38,6 @@ export default [
     input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-    external: [/\.css$/, "react", "react-dom"],
+    external: [/\.(css|less|scss)$/, Object.keys(packageJson.peerDependencies)],
   },
 ];
