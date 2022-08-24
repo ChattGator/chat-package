@@ -6,6 +6,7 @@ import dts from "rollup-plugin-dts";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
+import json from "@rollup/plugin-json";
 
 const packageJson = require("./package.json");
 
@@ -27,9 +28,15 @@ export default [
     plugins: [
       peerDepsExternal(),
       resolve(),
-      babel({ babelHelpers: "bundled" }),
+      babel({
+        babelHelpers: "bundled",
+        exclude: "node_modules/**",
+        presets: ["@babel/preset-react"],
+        babelHelpers: "bundled",
+      }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json", declarationDir: "dist" }),
+      json(),
       postcss(),
       terser(),
     ],

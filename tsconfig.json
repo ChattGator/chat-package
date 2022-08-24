@@ -7,6 +7,7 @@
     "strict": true, 
     "skipLibCheck": true,
 
+
     // Added
     "jsx": "react", 
     "module": "ESNext",  
